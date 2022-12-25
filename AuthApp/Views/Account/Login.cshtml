@@ -1,0 +1,17 @@
+@model AuthApp.Models.Login
+@{
+    ViewData["Title"] = "Login";
+}
+@ViewBag.Logado
+<form asp-controller="account" asp-action="login">
+    <label asp-for="UserName"></label>
+    <input asp-for="UserName" class="form-control">
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="form-control">
+    
+    <label asp-for="Password"></label>
+    <input asp-for="Password" class="form-control">
+    
+    <input type="submit" value="Login" class="btn btn-primary">
+</form>
