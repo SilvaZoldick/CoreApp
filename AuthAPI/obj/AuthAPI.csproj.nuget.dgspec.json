@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Coding\\CoreApp\\AuthAPI\\AuthAPI.csproj": {}
+    "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\AuthAPI\\AuthAPI.csproj": {}
   },
   "projects": {
-    "E:\\Coding\\CoreApp\\AuthAPI\\AuthAPI.csproj": {
+    "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\AuthAPI\\AuthAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Coding\\CoreApp\\AuthAPI\\AuthAPI.csproj",
+        "projectUniqueName": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\AuthAPI\\AuthAPI.csproj",
         "projectName": "AuthAPI",
-        "projectPath": "E:\\Coding\\CoreApp\\AuthAPI\\AuthAPI.csproj",
-        "packagesPath": "C:\\Users\\silva\\.nuget\\packages\\",
-        "outputPath": "E:\\Coding\\CoreApp\\AuthAPI\\obj\\",
+        "projectPath": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\AuthAPI\\AuthAPI.csproj",
+        "packagesPath": "C:\\Users\\israel.GALLTECNOLOGIA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\AuthAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\israel.GALLTECNOLOGIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,8 +77,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -90,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
         }
       }
     }

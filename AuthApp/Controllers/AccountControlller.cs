@@ -8,6 +8,10 @@ using AuthApp.Models;
 using AuthApp.Services;
 
 using Data.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
+
 namespace AuthApp.Controllers
 {
     [AllowAnonymous]
@@ -37,18 +41,28 @@ namespace AuthApp.Controllers
             if (!ModelState.IsValid)
                 return NotFound(new { message = "Not found" });
             try
-            {
+            {                
                 var result = await signInManager.PasswordSignInAsync(model.UserName, model.Password, false, false);
                 if (result.Succeeded)
                 {
                     var user = await userManager.FindByNameAsync(model.UserName);
-
+                    var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Name, ClaimTypes.Role);
+                    identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.UserName));
+                    identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
+                    var principal = new ClaimsPrincipal(identity);
                     string token = TokenService.GenerateToken(user);
-                    var headers = HttpContext.Request.Headers;
-                    var headerToken = "Bearer " + token;
-                    headers.Add("Authorization", headerToken);
-                    
-                    return RedirectToAction("Index", "Home");
+
+                    await HttpContext.SignInAsync(
+                        CookieAuthenticationDefaults.AuthenticationScheme,
+                        principal,
+                        new AuthenticationProperties
+                        {
+                            IsPersistent = true,
+                            AllowRefresh = true,
+                            ExpiresUtc = DateTime.UtcNow.AddDays(1)
+                        });
+
+                    return RedirectToAction("Index", "Home", new { area = "" });
                 }
                 return new {message = "Invalid user's credentials"};
             }
@@ -86,11 +100,7 @@ namespace AuthApp.Controllers
                 {
                     await signInManager.SignInAsync(user, isPersistent: false);
 
-                    var token = TokenService.GenerateToken(user);
-                    //var refreshToken = TokenService.GenerateRefreshToken();
-                    //TokenService.SaveRefreshToken(user.UserName, refreshToken);
-                    var headers = HttpContext.Request.Headers;
-                    headers.Add("Authorization", "Bearer " + token);
+                    var token = TokenService.GenerateToken(user);                    
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -106,6 +116,13 @@ namespace AuthApp.Controllers
             {
                 return NotFound(new { message = "An error has occurred. Error: " +  ex.Message});
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
 
         #region TestAccess

@@ -24,3 +24,16 @@ E:\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cac
 E:\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.dll
 E:\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.pdb
 E:\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.genruntimeconfig.cache
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\bin\Debug\netcoreapp3.1\Data.deps.json
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.json
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.dev.json
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.csproj.AssemblyReference.cache
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfoInputs.cache
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfo.cs
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.dll
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.pdb
+C:\Users\israel.GALLTECNOLOGIA\Documents\Coding\CoreApp\Data\obj\Debug\netcoreapp3.1\Data.genruntimeconfig.cache

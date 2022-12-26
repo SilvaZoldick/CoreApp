@@ -6286,19 +6286,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\silva\\.nuget\\packages\\": {}
+    "C:\\Users\\israel.GALLTECNOLOGIA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Coding\\CoreApp\\AuthApp\\AuthApp.csproj",
+      "projectUniqueName": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\AuthApp\\AuthApp.csproj",
       "projectName": "AuthApp",
-      "projectPath": "E:\\Coding\\CoreApp\\AuthApp\\AuthApp.csproj",
-      "packagesPath": "C:\\Users\\silva\\.nuget\\packages\\",
-      "outputPath": "E:\\Coding\\CoreApp\\AuthApp\\obj\\",
+      "projectPath": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\AuthApp\\AuthApp.csproj",
+      "packagesPath": "C:\\Users\\israel.GALLTECNOLOGIA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\AuthApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\israel.GALLTECNOLOGIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6312,8 +6312,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Coding\\CoreApp\\Data\\Data.csproj": {
-              "projectPath": "E:\\Coding\\CoreApp\\Data\\Data.csproj"
+            "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\Data\\Data.csproj"
             }
           }
         }
@@ -6366,6 +6366,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.31, 3.1.31]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6374,7 +6380,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

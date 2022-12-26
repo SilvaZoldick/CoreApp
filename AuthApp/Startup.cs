@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Data;
 using Data.Models;
+using Microsoft.Net.Http.Headers;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace AuthApp
 {
@@ -31,24 +33,40 @@ namespace AuthApp
 
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
             services.AddAuthentication(x =>
-                {
-                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                {                    
+                    x.DefaultScheme = "JWT_OR_COOKIE";
+                    x.DefaultChallengeScheme = "JWT_OR_COOKIE";
                 })
                 .AddJwtBearer(x =>
                     {
                         x.RequireHttpsMetadata = false;
-                        x.SaveToken = true;                        
+                        x.SaveToken = true;
                         x.TokenValidationParameters = new TokenValidationParameters
+                        {
+                            ValidateIssuerSigningKey = true,
+                            IssuerSigningKey = new SymmetricSecurityKey(key),                            
+                            ValidateIssuer = true,
+                            ValidIssuer = "https://localhost:5001",
+                            ValidateAudience = true,
+                            ValidAudience = "https://localhost:5001"
+
+                        };
+                    }).AddCookie(options =>
+                        {
+                            options.LoginPath = "/Account/Login";
+                    }).AddPolicyScheme("JWT_OR_COOKIE", "JWT_OR_COOKIE", options =>
                     {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(key),
-                        ValidateIssuer = false,
-                        ValidateAudience = false
-                    };
-                }).AddCookie(options =>
-                    {
-                        options.LoginPath = "Account/Login";
+                        // runs on each request
+                        options.ForwardDefaultSelector = context =>
+                        {
+                            // filter by auth type
+                            string authorization = context.Request.Headers[HeaderNames.Authorization];
+                            if (!string.IsNullOrEmpty(authorization) && authorization.StartsWith("Bearer "))
+                                return JwtBearerDefaults.AuthenticationScheme;
+
+                            // otherwise always check for cookie auth
+                            return CookieAuthenticationDefaults.AuthenticationScheme;
+                        };                        
                     });
 
             services.AddScoped<DataContext>();

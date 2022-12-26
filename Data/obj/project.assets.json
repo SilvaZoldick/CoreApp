@@ -6123,19 +6123,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\silva\\.nuget\\packages\\": {}
+    "C:\\Users\\israel.GALLTECNOLOGIA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Coding\\CoreApp\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "E:\\Coding\\CoreApp\\Data\\Data.csproj",
-      "packagesPath": "C:\\Users\\silva\\.nuget\\packages\\",
-      "outputPath": "E:\\Coding\\CoreApp\\Data\\obj\\",
+      "projectPath": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\israel.GALLTECNOLOGIA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\israel.GALLTECNOLOGIA\\Documents\\Coding\\CoreApp\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\israel.GALLTECNOLOGIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6206,7 +6206,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
