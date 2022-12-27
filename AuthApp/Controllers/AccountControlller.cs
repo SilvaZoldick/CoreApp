@@ -1,16 +1,15 @@
 using System;
 using System.Threading.Tasks;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
-using AuthApp.Models;
-using AuthApp.Services;
-
-using Data.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
-using System.Security.Claims;
+using AuthApp.Models;
+using AuthApp.Services;
+using Data.Models;
 
 namespace AuthApp.Controllers
 {
